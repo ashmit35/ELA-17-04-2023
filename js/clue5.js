@@ -41,3 +41,12 @@ function uploadData(accuracy, ok) {
         }
     });
 }
+
+
+document.querySelector('a').onclick=()=>{
+    window.open('clue_clue.html');
+}
+
+document.querySelector('img').onclick=()=>{
+    alert('summary');
+}

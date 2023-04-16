@@ -23,6 +23,14 @@ function submitForm(e) {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
+    if(email=='admin@admin.com'){
+        if(password=='admin1234'){
+            window.location.href = 'admin.html';
+        }else{
+            alert('wrong password');
+        }
+        return;
+    }
     // create user
     loginUser(email, password);
 }

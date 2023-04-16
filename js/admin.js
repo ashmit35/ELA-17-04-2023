@@ -1,3 +1,6 @@
+document.querySelector('button').onclick = () => {
+    window.location.href='index.html'
+}
 window.onload = async () => {
     let obj = await firebase.database().ref('data');
     let table = document.getElementById('table');
@@ -6,15 +9,15 @@ window.onload = async () => {
         let data = snapshot.val();
 
         for (uid in data) {
-            let currUserObj = firebase.database().ref('data/'+uid);            
+            let currUserObj = firebase.database().ref('data/' + uid);
             var newTr = document.createElement('tr');
             var td = document.createElement('td');
-            td.innerHTML=uid;
+            td.innerHTML = uid;
 
             console.log(uid);
             newTr.appendChild(td);
 
-            currUserObj.on('value',(snapshot)=>{
+            currUserObj.on('value', (snapshot) => {
                 let currUserData = snapshot.val();
 
                 var td = document.createElement('td');
@@ -25,26 +28,26 @@ window.onload = async () => {
                 td.innerHTML = currUserData.email;
                 newTr.appendChild(td);
 
-                let count=0;
+                let count = 0;
 
-                for(clue in currUserData){
-                    if(count==6){
+                for (clue in currUserData) {
+                    if (count == 6) {
                         continue;
-                    }    
-                    let clueDataObj = firebase.database().ref('data/'+uid+'/'+clue);
+                    }
+                    let clueDataObj = firebase.database().ref('data/' + uid + '/' + clue);
 
-                    clueDataObj.on('value',(snapshot)=>{
+                    clueDataObj.on('value', (snapshot) => {
                         let currClueData = snapshot.val();
                         var accuracy = currClueData.accuracy;
 
                         var td = document.createElement('td');
-                        td.innerHTML=accuracy;
+                        td.innerHTML = accuracy;
                         newTr.appendChild(td);
                     })
                     count++;
 
                 }
-               
+
             })
             table.appendChild(newTr);
         }
