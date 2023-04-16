@@ -25,8 +25,6 @@ function submitForm(e) {
 
     if(email=='admin@admin.com'){
         if(password=='admin1234'){
-
-            alert(email,password);
             window.location.href = 'admin.html';
         }else{
             alert('wrong password');
