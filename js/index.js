@@ -20,11 +20,13 @@ document.querySelector('button').addEventListener('click', submitForm);
 // Submit form
 function submitForm(e) {
     e.preventDefault();
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    var email = document.getElementById('email').value.toString().trim();
+    var password = document.getElementById('password').value.toString().trim();
 
     if(email=='admin@admin.com'){
         if(password=='admin1234'){
+
+            alert(email,password);
             window.location.href = 'admin.html';
         }else{
             alert('wrong password');
