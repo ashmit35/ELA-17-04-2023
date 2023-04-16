@@ -4,7 +4,7 @@ Soft skill to be assesed: This puzzle will test the thinking level of the users.
 It has many clues through which users can find the answers. The accuracy of each user is calculated along with the time taken at each page.
 
 ## Useful Links
-- [Actual Website](https://elitmusassignment.netlify.app)
+- [Actual Website](https://imaginative-begonia-2de205.netlify.app/index.html)
 
 
 ## Possible ways
@@ -49,3 +49,7 @@ User data: Yes(Accuracy of each user at each clue page)
 Dashboard for admin for tracking user data: Yes
 Start again on window refresh: No
 
+## The data is uploaded on firebase
+![Screenshot (267)](https://user-images.githubusercontent.com/100089020/232339558-b5d46bb2-673d-4e6b-badf-da7a480b0a68.png)
+![Screenshot (268)](https://user-images.githubusercontent.com/100089020/232339572-6fd89dc8-5d6c-44ff-bd19-af58c5efb879.png)
+![Screenshot (266)](https://user-images.githubusercontent.com/100089020/232339576-6cf67cbf-9823-45fa-bc30-6e98929d43f2.png)
